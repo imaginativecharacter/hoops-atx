@@ -80,13 +80,10 @@ html,body{background:var(--bg);color:var(--text);font-family:var(--f-body);heigh
 #root{height:100vh;display:flex;flex-direction:column}
 ::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
 .app{display:flex;flex-direction:column;height:100vh;overflow:hidden;background:var(--bg)}
-
-/* Subtle court line texture */
 .app::after{content:'';position:fixed;inset:0;background:
   repeating-linear-gradient(0deg,transparent,transparent 79px,rgba(255,107,26,0.025) 80px),
   repeating-linear-gradient(90deg,transparent,transparent 79px,rgba(255,107,26,0.018) 80px);
   pointer-events:none;z-index:0}
-
 .hdr{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;
   border-bottom:1px solid var(--border);background:var(--bg);flex-shrink:0;position:relative;z-index:10}
 .logo{font-family:var(--f-disp);font-size:26px;letter-spacing:3px;line-height:1;color:var(--text)}
@@ -97,17 +94,13 @@ html,body{background:var(--bg);color:var(--text);font-family:var(--f-body);heigh
   display:flex;align-items:center;justify-content:center;font-family:var(--f-mono);font-size:10px;
   color:var(--orange);cursor:pointer;transition:all .2s}
 .av-sm:hover{background:var(--orange);color:#fff}
-
 .content{flex:1;overflow-y:auto;overflow-x:hidden;position:relative;z-index:1}
-
 .tabs{display:flex;background:var(--surface);border-top:1px solid var(--border);flex-shrink:0;position:relative;z-index:10}
 .tab{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
   padding:9px 4px 11px;cursor:pointer;transition:all .2s;gap:3px;border:none;background:none;
   color:var(--muted);font-family:var(--f-body);font-size:10px;font-weight:600;letter-spacing:.5px;text-transform:uppercase}
 .tab.on{color:var(--orange)}.tab:hover:not(.on){color:var(--dim)}
 .tab-ico{font-size:19px;line-height:1}
-
-/* Feed */
 .feed-hdr{padding:18px 20px 12px;background:var(--bg)}
 .feed-ttl{font-family:var(--f-disp);font-size:34px;letter-spacing:2px;line-height:1;margin-bottom:2px}
 .feed-sub{font-size:13px;color:var(--dim)}
@@ -117,7 +110,6 @@ html,body{background:var(--bg);color:var(--text);font-family:var(--f-body);heigh
   color:var(--dim);font-family:var(--f-body);font-size:12px;font-weight:600;cursor:pointer;transition:all .15s;white-space:nowrap}
 .chip:hover{border-color:var(--orange);color:var(--text)}.chip.on{background:var(--orange);border-color:var(--orange);color:#fff}
 .glist{padding:0 20px 24px;display:flex;flex-direction:column;gap:11px}
-
 .gcard{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:15px;
   cursor:pointer;transition:all .2s;position:relative;overflow:hidden}
 .gcard::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;
@@ -138,8 +130,6 @@ html,body{background:var(--bg);color:var(--text);font-family:var(--f-body);heigh
   color:var(--dim);margin-left:-5px}
 .pav:first-child{margin-left:0}
 .spots{font-size:11px;color:var(--muted);font-family:var(--f-mono)}.spots.urg{color:var(--orange)}
-
-/* Modal */
 .overlay{position:fixed;inset:0;background:rgba(0,0,0,.82);z-index:100;display:flex;
   align-items:flex-end;backdrop-filter:blur(6px);animation:fadein .2s ease}
 @keyframes fadein{from{opacity:0}to{opacity:1}}
@@ -169,15 +159,12 @@ html,body{background:var(--bg);color:var(--text);font-family:var(--f-body);heigh
 .rav{width:30px;height:30px;border-radius:50%;background:var(--orange-d);border:1.5px solid var(--orange);
   display:flex;align-items:center;justify-content:center;font-family:var(--f-mono);font-size:9px;color:var(--orange)}
 .rname{font-size:13px;font-weight:500}.rhost{margin-left:auto;font-size:10px;font-family:var(--f-mono);color:var(--orange)}
-
 .btn{width:100%;padding:15px;border-radius:var(--r);border:none;font-family:var(--f-disp);
   font-size:19px;letter-spacing:2px;cursor:pointer;transition:all .2s}
 .btn-p{background:var(--orange);color:#fff}
 .btn-p:hover{background:#ff7d35;transform:translateY(-1px);box-shadow:0 8px 22px var(--orange-g)}
 .btn-joined{background:var(--card);color:var(--green);border:1px solid var(--green);cursor:default}
 .btn-full{background:var(--card);color:var(--muted);border:1px solid var(--border);cursor:not-allowed}
-
-/* Post */
 .post-wrap{padding:20px}
 .page-ttl{font-family:var(--f-disp);font-size:34px;letter-spacing:2px;margin-bottom:2px}
 .page-sub{font-size:13px;color:var(--dim);margin-bottom:22px}
@@ -195,8 +182,6 @@ html,body{background:var(--bg);color:var(--text);font-family:var(--f-body);heigh
   border:1px solid rgba(255,210,63,.28);border-radius:6px;color:var(--yellow);font-family:var(--f-mono);
   font-size:10px;cursor:pointer;transition:all .15s;margin-bottom:7px;letter-spacing:.5px}
 .ai-btn:hover{background:rgba(255,210,63,.2)}.ai-btn:disabled{opacity:.45;cursor:not-allowed}
-
-/* Scout */
 .scout-wrap{display:flex;flex-direction:column;overflow:hidden}
 .scout-hdr{padding:18px 20px 14px;border-bottom:1px solid var(--border);flex-shrink:0}
 .chat-msgs{flex:1;overflow-y:auto;padding:14px 20px;display:flex;flex-direction:column;gap:11px;min-height:0}
@@ -223,8 +208,6 @@ html,body{background:var(--bg);color:var(--text);font-family:var(--f-body);heigh
 .sugg{padding:9px 14px;background:var(--card);border:1px solid var(--border2);border-radius:9px;
   font-size:12px;color:var(--dim);cursor:pointer;transition:all .15s;text-align:left}
 .sugg:hover{border-color:var(--orange);color:var(--text);background:var(--card2)}
-
-/* Profile */
 .prof-wrap{padding:20px}
 .pcard{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:22px;
   display:flex;flex-direction:column;align-items:center;gap:10px;margin-bottom:20px;
@@ -245,29 +228,21 @@ html,body{background:var(--bg);color:var(--text);font-family:var(--f-body);heigh
 .edit-btn{width:100%;padding:11px;background:var(--card);border:1px solid var(--border2);border-radius:var(--rs);
   color:var(--dim);font-family:var(--f-mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:all .15s}
 .edit-btn:hover{border-color:var(--orange);color:var(--orange)}
-
-/* Onboarding */
 .ob{min-height:100vh;display:flex;flex-direction:column;padding:40px 24px 32px;background:var(--bg)}
 .ob-logo{font-family:var(--f-disp);font-size:46px;letter-spacing:4px;line-height:1;margin-bottom:6px}
 .ob-logo span{color:var(--orange)}
 .ob-tag{font-size:14px;color:var(--dim);margin-bottom:36px;line-height:1.55}
-
-/* Loading */
 .loading{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;gap:18px}
 .load-logo{font-family:var(--f-disp);font-size:46px;letter-spacing:4px;color:var(--text)}
 .load-logo span{color:var(--orange)}
 .spinner{width:28px;height:28px;border:2px solid var(--border);border-top-color:var(--orange);
   border-radius:50%;animation:spin .75s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
-
-/* Toast */
 .toast{position:fixed;bottom:76px;left:50%;transform:translateX(-50%);background:var(--green);
   color:#fff;padding:9px 20px;border-radius:22px;font-size:13px;font-weight:600;z-index:200;
   white-space:nowrap;animation:tin .3s ease, tout .3s ease 2.5s forwards}
 @keyframes tin{from{opacity:0;transform:translate(-50%,18px)}to{opacity:1;transform:translate(-50%,0)}}
 @keyframes tout{from{opacity:1}to{opacity:0}}
-
-/* Empty */
 .empty{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:50px 24px;gap:10px;text-align:center}
 .e-ico{font-size:44px;opacity:.4}
 .e-ttl{font-family:var(--f-disp);font-size:22px;letter-spacing:1px;color:var(--dim)}
@@ -279,6 +254,16 @@ function initials(name) {
   return name.split(" ").map(w=>w[0]||"").join("").toUpperCase().slice(0,2);
 }
 
+function lsGet(key) {
+  try { const v = localStorage.getItem(key); return v ? JSON.parse(v) : null; } catch { return null; }
+}
+function lsSet(key, val) {
+  try { localStorage.setItem(key, JSON.stringify(val)); } catch {}
+}
+function lsDel(key) {
+  try { localStorage.removeItem(key); } catch {}
+}
+
 export default function HoopsATX() {
   const [state,      setState]      = useState("loading");
   const [tab,        setTab]        = useState("feed");
@@ -287,51 +272,37 @@ export default function HoopsATX() {
   const [selGame,    setSelGame]    = useState(null);
   const [filter,     setFilter]     = useState("All");
   const [toast,      setToast]      = useState(null);
-
-  const [draft, setDraft] = useState({name:"",position:"",skillLevel:"",neighborhood:"",bio:""});
-
-  const [postForm, setPostForm] = useState({court:"",date:"",time:"",skillLevel:"",spotsTotal:10,description:""});
-  const [aiPosting, setAiPosting] = useState(false);
-
+  const [draft,      setDraft]      = useState({name:"",position:"",skillLevel:"",neighborhood:"",bio:""});
+  const [postForm,   setPostForm]   = useState({court:"",date:"",time:"",skillLevel:"",spotsTotal:10,description:""});
+  const [aiPosting,  setAiPosting]  = useState(false);
   const [msgs,       setMsgs]       = useState([]);
   const [chatIn,     setChatIn]     = useState("");
   const [chatBusy,   setChatBusy]   = useState(false);
   const [chatLive,   setChatLive]   = useState(false);
   const chatEnd = useRef(null);
 
-  // ── Boot ──────────────────────────────────────────────────────────────────
   useEffect(()=>{
-    (async()=>{
-      try {
-        const pr = await window.storage.get("hoops:profile").catch(()=>null);
-        const gr = await window.storage.get("hoops:games").catch(()=>null);
-        let g = SEED_GAMES;
-        if(gr) { try{g=JSON.parse(gr.value)}catch{} }
-        else { window.storage.set("hoops:games",JSON.stringify(SEED_GAMES)).catch(()=>{}); }
-        setGames(g);
-        if(pr){ try{ setProfile(JSON.parse(pr.value)); setState("main"); return; }catch{} }
-        setState("onboarding");
-      } catch {
-        setGames(SEED_GAMES);
-        setState("onboarding");
-      }
-    })();
+    const savedProfile = lsGet("hoops:profile");
+    const savedGames   = lsGet("hoops:games");
+    const g = savedGames || SEED_GAMES;
+    if (!savedGames) lsSet("hoops:games", SEED_GAMES);
+    setGames(g);
+    if (savedProfile) { setProfile(savedProfile); setState("main"); }
+    else setState("onboarding");
   },[]);
 
   useEffect(()=>{ chatEnd.current?.scrollIntoView({behavior:"smooth"}); },[msgs,chatBusy]);
 
   const flash = msg => { setToast(msg); setTimeout(()=>setToast(null),3000); };
 
-  // ── Save Profile ──────────────────────────────────────────────────────────
-  const saveProfile = async () => {
-    const p = {...draft, id:`u${Date.now()}`, gamesJoined:[], gamesPosted:[]};
-    await window.storage.set("hoops:profile", JSON.stringify(p)).catch(()=>{});
+  const saveProfile = () => {
+    const p = {...draft, id:`u${Date.now()}`};
+    lsSet("hoops:profile", p);
     setProfile(p);
     setState("main");
   };
 
-  // ── Join Game ─────────────────────────────────────────────────────────────
-  const joinGame = async (id) => {
+  const joinGame = (id) => {
     const updated = games.map(g=>{
       if(g.id!==id) return g;
       if(g.players.some(p=>p.name===profile.name)) return g;
@@ -339,13 +310,12 @@ export default function HoopsATX() {
       return {...g, players:[...g.players,{name:profile.name, avatar:initials(profile.name)}]};
     });
     setGames(updated);
-    window.storage.set("hoops:games",JSON.stringify(updated)).catch(()=>{});
+    lsSet("hoops:games", updated);
     if(selGame?.id===id) setSelGame(updated.find(g=>g.id===id));
     flash("You're in! 🏀");
   };
 
-  // ── Post Game ─────────────────────────────────────────────────────────────
-  const postGame = async () => {
+  const postGame = () => {
     if(!postForm.court||!postForm.date||!postForm.time||!postForm.skillLevel){
       flash("Fill in all required fields"); return;
     }
@@ -361,13 +331,12 @@ export default function HoopsATX() {
     };
     const updated = [ng,...games];
     setGames(updated);
-    window.storage.set("hoops:games",JSON.stringify(updated)).catch(()=>{});
+    lsSet("hoops:games", updated);
     setPostForm({court:"",date:"",time:"",skillLevel:"",spotsTotal:10,description:""});
     flash("Run posted! 🔥");
     setTab("feed");
   };
 
-  // ── AI Description ────────────────────────────────────────────────────────
   const aiDescribe = async () => {
     if(!postForm.court||!postForm.skillLevel){ flash("Pick a court & skill level first"); return; }
     setAiPosting(true);
@@ -386,28 +355,24 @@ export default function HoopsATX() {
     setAiPosting(false);
   };
 
-  // ── AI Scout Chat ─────────────────────────────────────────────────────────
   const sendChat = async (override) => {
     const txt = override||chatIn;
     if(!txt.trim()||chatBusy) return;
     setChatIn(""); setChatLive(true);
     const next = [...msgs, {role:"user",content:txt}];
     setMsgs(next); setChatBusy(true);
-
     const ctx = JSON.stringify(games.map(g=>({
-      id:g.id, court:g.court, neighborhood:g.neighborhood,
-      date:g.date, time:g.time, skillLevel:g.skillLevel,
-      open:`${g.spotsTotal - g.players.length} spots open`,
+      court:g.court, neighborhood:g.neighborhood, date:g.date, time:g.time,
+      skillLevel:g.skillLevel, open:`${g.spotsTotal - g.players.length} spots open`,
       description:g.description.slice(0,80)
     })));
     const pCtx = profile ? `Player: ${profile.name}, Skill: ${profile.skillLevel}, Position: ${profile.position}, Area: ${profile.neighborhood}` : "No profile";
-
     try {
       const r = await fetch("https://api.anthropic.com/v1/messages",{
         method:"POST", headers:{"Content-Type":"application/json"},
         body:JSON.stringify({
           model:"claude-sonnet-4-20250514", max_tokens:1000,
-          system:`You are HoopsScout, an AI for Hoops ATX — Austin Texas pickup basketball. Help players find games, learn about courts, and connect with the Austin hoops scene. Be conversational and knowledgeable, keep replies to 2-4 sentences. Don't use markdown. Reference specific games from the list when relevant.\n\nLive games: ${ctx}\nUser: ${pCtx}`,
+          system:`You are HoopsScout, an AI for Hoops ATX — Austin Texas pickup basketball. Help players find games, learn about courts, and connect with the Austin hoops scene. Be conversational, keep replies to 2-4 sentences. No markdown.\n\nLive games: ${ctx}\nUser: ${pCtx}`,
           messages:next
         })
       });
@@ -420,14 +385,10 @@ export default function HoopsATX() {
     setChatBusy(false);
   };
 
-  // ── Derived ───────────────────────────────────────────────────────────────
   const filtered = filter==="All" ? games : games.filter(g=>g.skillLevel===filter);
   const isJoined = g => g.players.some(p=>p.name===profile?.name);
   const isFull   = g => g.players.length >= g.spotsTotal;
 
-  // ═══════════════════════════════════════════════════════════════════════════
-  //  LOADING
-  // ═══════════════════════════════════════════════════════════════════════════
   if(state==="loading") return (
     <><style>{CSS}</style>
     <div className="loading">
@@ -436,9 +397,6 @@ export default function HoopsATX() {
     </div></>
   );
 
-  // ═══════════════════════════════════════════════════════════════════════════
-  //  ONBOARDING
-  // ═══════════════════════════════════════════════════════════════════════════
   if(state==="onboarding") return (
     <><style>{CSS}</style>
     <div className="ob">
@@ -486,30 +444,21 @@ export default function HoopsATX() {
     </div></>
   );
 
-  // ═══════════════════════════════════════════════════════════════════════════
-  //  MAIN APP
-  // ═══════════════════════════════════════════════════════════════════════════
   const scoutH = `calc(100vh - 57px - 62px)`;
 
   return (
     <><style>{CSS}</style>
     <div className="app">
-
-      {/* Header */}
       <div className="hdr">
         <div className="logo">HOOPS<span>ATX</span></div>
         <div className="hdr-right">
           <div className="hdr-count">{games.length} runs live</div>
-          <div className="av-sm" onClick={()=>setTab("profile")} title="Profile">
-            {initials(profile?.name)}
-          </div>
+          <div className="av-sm" onClick={()=>setTab("profile")}>{initials(profile?.name)}</div>
         </div>
       </div>
 
-      {/* Content */}
       <div className="content" style={tab==="scout"?{overflow:"hidden"}:{}}>
 
-        {/* ──── FEED ──────────────────────────────────────────────────────── */}
         {tab==="feed" && (
           <div>
             <div className="feed-hdr">
@@ -523,18 +472,12 @@ export default function HoopsATX() {
             </div>
             <div className="glist">
               {filtered.length===0
-                ? <div className="empty">
-                    <div className="e-ico">🏀</div>
-                    <div className="e-ttl">NO RUNS FOUND</div>
-                    <div className="e-txt">Be the first to post a game at this level</div>
-                  </div>
+                ? <div className="empty"><div className="e-ico">🏀</div><div className="e-ttl">NO RUNS FOUND</div><div className="e-txt">Be the first to post a game</div></div>
                 : filtered.map(g=>{
                     const lc = LEVEL_COLORS[g.skillLevel]||LEVEL_COLORS.Intermediate;
                     const left = g.spotsTotal - g.players.length;
                     return (
-                      <div key={g.id} className="gcard"
-                        style={{"--lc":lc.text,"--lb":lc.bg,"--lbc":lc.border}}
-                        onClick={()=>setSelGame(g)}>
+                      <div key={g.id} className="gcard" style={{"--lc":lc.text,"--lb":lc.bg,"--lbc":lc.border}} onClick={()=>setSelGame(g)}>
                         <div className="gcard-top">
                           <div>
                             <div className="g-court">{g.court}</div>
@@ -551,9 +494,7 @@ export default function HoopsATX() {
                             {g.players.slice(0,5).map((p,i)=><div key={i} className="pav">{p.avatar}</div>)}
                             {g.players.length>5 && <div className="pav">+{g.players.length-5}</div>}
                           </div>
-                          <div className={`spots${left<=2?" urg":""}`}>
-                            {left===0?"FULL":`${left} spot${left!==1?"s":""} left`}
-                          </div>
+                          <div className={`spots${left<=2?" urg":""}`}>{left===0?"FULL":`${left} spot${left!==1?"s":""} left`}</div>
                         </div>
                       </div>
                     );
@@ -563,7 +504,6 @@ export default function HoopsATX() {
           </div>
         )}
 
-        {/* ──── POST GAME ──────────────────────────────────────────────────── */}
         {tab==="post" && (
           <div className="post-wrap">
             <div className="page-ttl">POST A RUN</div>
@@ -595,48 +535,39 @@ export default function HoopsATX() {
               </div>
               <div className="fg">
                 <label className="flbl">Total Spots</label>
-                <input type="number" className="fi" min={2} max={20}
-                  value={postForm.spotsTotal} onChange={e=>setPostForm(f=>({...f,spotsTotal:e.target.value}))}/>
+                <input type="number" className="fi" min={2} max={20} value={postForm.spotsTotal} onChange={e=>setPostForm(f=>({...f,spotsTotal:e.target.value}))}/>
               </div>
             </div>
             <div className="fg">
               <label className="flbl">Description</label>
-              <button className="ai-btn" onClick={aiDescribe} disabled={aiPosting}>
-                {aiPosting?"✦ Writing...":"✦ AI Write Description"}
-              </button>
-              <textarea className="fta" placeholder="What should players know about this run?"
-                value={postForm.description} onChange={e=>setPostForm(f=>({...f,description:e.target.value}))}/>
+              <button className="ai-btn" onClick={aiDescribe} disabled={aiPosting}>{aiPosting?"✦ Writing...":"✦ AI Write Description"}</button>
+              <textarea className="fta" placeholder="What should players know about this run?" value={postForm.description} onChange={e=>setPostForm(f=>({...f,description:e.target.value}))}/>
             </div>
             <button className="btn btn-p" style={{marginTop:8}} onClick={postGame}>POST THE RUN</button>
           </div>
         )}
 
-        {/* ──── AI SCOUT ───────────────────────────────────────────────────── */}
         {tab==="scout" && (
           <div className="scout-wrap" style={{height:scoutH}}>
             <div className="scout-hdr">
               <div className="page-ttl">AI SCOUT</div>
               <div className="page-sub" style={{marginBottom:0}}>Find your perfect run — just ask</div>
             </div>
-
             {!chatLive && (
               <div className="suggs">
                 <div className="slbl" style={{padding:"8px 0 2px"}}>Try asking</div>
                 {[
                   "Find me a beginner-friendly game this weekend",
-                  `Best game for a ${profile?.skillLevel||"intermediate"} ${profile?.position?.split(" ")[0]||"player"}`,
+                  `Best game for a ${profile?.skillLevel||"intermediate"} player`,
                   "Which games in East Austin still have spots?",
                   "What are the best outdoor courts in Austin?",
-                ].map(s=>(
-                  <button key={s} className="sugg" onClick={()=>sendChat(s)}>{s}</button>
-                ))}
+                ].map(s=><button key={s} className="sugg" onClick={()=>sendChat(s)}>{s}</button>)}
               </div>
             )}
-
             <div className="chat-msgs">
               {msgs.map((m,i)=>(
                 <div key={i} className={`cmsg ${m.role==="user"?"u":"a"}`}>
-                  <div className="clbl">{m.role==="user" ? (profile?.name||"You") : "HoopsScout AI"}</div>
+                  <div className="clbl">{m.role==="user"?(profile?.name||"You"):"HoopsScout AI"}</div>
                   <div className="cbbl">{m.content}</div>
                 </div>
               ))}
@@ -648,22 +579,18 @@ export default function HoopsATX() {
               )}
               <div ref={chatEnd}/>
             </div>
-
             <div className="chat-in-area">
               <input className="chat-in" placeholder="Ask about games, courts, players..."
-                value={chatIn} onChange={e=>setChatIn(e.target.value)}
-                onKeyDown={e=>e.key==="Enter"&&sendChat()}/>
+                value={chatIn} onChange={e=>setChatIn(e.target.value)} onKeyDown={e=>e.key==="Enter"&&sendChat()}/>
               <button className="chat-send" onClick={()=>sendChat()} disabled={chatBusy||!chatIn.trim()}>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                  <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13"
-                    stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </button>
             </div>
           </div>
         )}
 
-        {/* ──── PROFILE ────────────────────────────────────────────────────── */}
         {tab==="profile" && profile && (
           <div className="prof-wrap">
             <div className="pcard">
@@ -676,7 +603,6 @@ export default function HoopsATX() {
               </div>
               {profile.bio && <div className="pbio">{profile.bio}</div>}
             </div>
-
             <div className="stats">
               <div className="stile">
                 <div className="sval">{games.filter(g=>g.players.some(p=>p.name===profile.name)).length}</div>
@@ -687,62 +613,41 @@ export default function HoopsATX() {
                 <div className="slb">Games Posted</div>
               </div>
             </div>
-
             <div className="slbl" style={{marginBottom:10}}>Your Runs</div>
             {games.filter(g=>g.players.some(p=>p.name===profile.name)).length===0
-              ? <div className="empty" style={{padding:"20px 0"}}>
-                  <div className="e-ico">🏀</div>
-                  <div className="e-txt">Join or post a game to see it here</div>
-                </div>
+              ? <div className="empty" style={{padding:"20px 0"}}><div className="e-ico">🏀</div><div className="e-txt">Join or post a game to see it here</div></div>
               : <div style={{display:"flex",flexDirection:"column",gap:9,marginBottom:24}}>
-                  {games.filter(g=>g.players.some(p=>p.name===profile.name)).map(g=>{
-                    const lc = LEVEL_COLORS[g.skillLevel]||LEVEL_COLORS.Intermediate;
-                    return (
-                      <div key={g.id} className="gcard"
-                        style={{"--lc":lc.text}}
-                        onClick={()=>{setSelGame(g);setTab("feed");}}>
-                        <div className="g-court">{g.court}</div>
-                        <div className="g-addr">{g.date} · {g.time} · {g.skillLevel}</div>
-                      </div>
-                    );
-                  })}
+                  {games.filter(g=>g.players.some(p=>p.name===profile.name)).map(g=>(
+                    <div key={g.id} className="gcard" style={{"--lc":LEVEL_COLORS[g.skillLevel]?.text}} onClick={()=>{setSelGame(g);setTab("feed");}}>
+                      <div className="g-court">{g.court}</div>
+                      <div className="g-addr">{g.date} · {g.time} · {g.skillLevel}</div>
+                    </div>
+                  ))}
                 </div>
             }
-
-            <button className="edit-btn" onClick={async()=>{
-              await window.storage.delete("hoops:profile").catch(()=>{});
-              setProfile(null); setState("onboarding");
-            }}>Edit Profile / Switch Player</button>
+            <button className="edit-btn" onClick={()=>{ lsDel("hoops:profile"); setProfile(null); setState("onboarding"); }}>
+              Edit Profile / Switch Player
+            </button>
           </div>
         )}
 
       </div>
 
-      {/* Tab Bar */}
       <div className="tabs">
-        {[
-          {id:"feed",   ico:"🏀", lbl:"Games"},
-          {id:"post",   ico:"➕", lbl:"Post"},
-          {id:"scout",  ico:"✦",  lbl:"AI Scout"},
-          {id:"profile",ico:"👤", lbl:"Profile"},
-        ].map(t=>(
+        {[{id:"feed",ico:"🏀",lbl:"Games"},{id:"post",ico:"➕",lbl:"Post"},{id:"scout",ico:"✦",lbl:"AI Scout"},{id:"profile",ico:"👤",lbl:"Profile"}].map(t=>(
           <button key={t.id} className={`tab ${tab===t.id?"on":""}`} onClick={()=>setTab(t.id)}>
             <span className="tab-ico">{t.ico}</span>{t.lbl}
           </button>
         ))}
       </div>
 
-      {/* Game Detail Modal */}
       {selGame && (
         <div className="overlay" onClick={e=>{ if(e.target===e.currentTarget) setSelGame(null); }}>
           <div className="modal">
             <div className="modal-handle"/>
             <div className="modal-hdr">
               <div>
-                <div style={{fontSize:10,fontFamily:"var(--f-mono)",color:"var(--muted)",
-                  textTransform:"uppercase",letterSpacing:"1px",marginBottom:3}}>
-                  {selGame.neighborhood}
-                </div>
+                <div style={{fontSize:10,fontFamily:"var(--f-mono)",color:"var(--muted)",textTransform:"uppercase",letterSpacing:"1px",marginBottom:3}}>{selGame.neighborhood}</div>
                 <div className="m-court">{selGame.court}</div>
                 <div className="m-addr">{selGame.address}</div>
               </div>
@@ -752,20 +657,12 @@ export default function HoopsATX() {
               <div className="info-grid">
                 <div className="itile"><div className="itile-lbl">Date</div><div className="itile-val">{selGame.date}</div></div>
                 <div className="itile"><div className="itile-lbl">Time</div><div className="itile-val">{selGame.time}</div></div>
-                <div className="itile">
-                  <div className="itile-lbl">Level</div>
-                  <div className="itile-val" style={{color:LEVEL_COLORS[selGame.skillLevel]?.text}}>{selGame.skillLevel}</div>
-                </div>
-                <div className="itile">
-                  <div className="itile-lbl">Spots</div>
-                  <div className="itile-val">{selGame.players.length}/{selGame.spotsTotal}</div>
-                </div>
+                <div className="itile"><div className="itile-lbl">Level</div><div className="itile-val" style={{color:LEVEL_COLORS[selGame.skillLevel]?.text}}>{selGame.skillLevel}</div></div>
+                <div className="itile"><div className="itile-lbl">Spots</div><div className="itile-val">{selGame.players.length}/{selGame.spotsTotal}</div></div>
               </div>
-
               <div className="slbl">About This Run</div>
               <div className="desc">{selGame.description}</div>
               <div className="posted-by">Posted by {selGame.postedBy}</div>
-
               <div className="slbl">Players ({selGame.players.length})</div>
               <div className="roster">
                 {selGame.players.map((p,i)=>(
@@ -776,7 +673,6 @@ export default function HoopsATX() {
                   </div>
                 ))}
               </div>
-
               {isJoined(selGame)
                 ? <button className="btn btn-joined">✓ YOU'RE IN THIS RUN</button>
                 : isFull(selGame)
@@ -788,9 +684,7 @@ export default function HoopsATX() {
         </div>
       )}
 
-      {/* Toast */}
       {toast && <div className="toast">{toast}</div>}
-
     </div>
     </>
   );
